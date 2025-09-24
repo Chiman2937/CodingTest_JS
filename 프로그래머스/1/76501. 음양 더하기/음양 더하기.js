@@ -1,0 +1,1 @@
+const solution = (absolutes, signs) => absolutes.reduce((a,c,i) => signs[i] ? a+c : a-c,0)
