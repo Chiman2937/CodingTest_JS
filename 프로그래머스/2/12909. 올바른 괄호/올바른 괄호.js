@@ -1,10 +1,10 @@
-const solution = (s) => {
-    let stack = 0;
-    for(i=0;i<s.length;i++) {
-        if (s[i] === '(') stack++;
-        else if (s[i] === ')') stack--;
-        if(stack < 0) return false;
+function solution(s){
+    let count = 0;
+    for(let i=0;i<s.length;i++){
+        if(s[i]==='(')count++;
+        else if(s[i]===')')count--;
+        if (count < 0) return false;
     }
-    if (stack !== 0) return false;
+    if (count !== 0) return false;
     return true;
-};
+}
