@@ -1,13 +1,15 @@
-const solution = (s) => {
-  let result1 = 0; //변환 횟수
-  let result2 = 0; //0의 갯수
-  while (true) {
-    if (s === '1') break;
-    const cnt_1 = s.replaceAll('0', '').length;
-    const def_0 = s.length - cnt_1;
-    s = cnt_1.toString(2);
-    result1++;
-    result2 += def_0;
-  }
-  return [result1, result2];
-};
+function solution(s) {
+    let cnt_trans = 0;
+    let cnt_zero = 0;
+    
+    while(s!=='1'){
+        const n = s.length
+        s = s.replaceAll('0','')    
+        const m = s.length
+        s = m.toString(2);
+        cnt_trans++
+        cnt_zero+=n-m
+    }
+    return [cnt_trans,cnt_zero]
+
+}
