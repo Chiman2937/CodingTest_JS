@@ -32,5 +32,3 @@ function solution(number, k) {
     // }
     // return result;
 }
-
-console.log(solution("10",1))
