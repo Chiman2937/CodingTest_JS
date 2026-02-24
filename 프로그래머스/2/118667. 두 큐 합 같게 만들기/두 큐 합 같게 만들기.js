@@ -6,6 +6,9 @@ function solution(queue1, queue2) {
   let sum_q1 = queue1.reduce((a, c) => a + c, 0);
   let result = 0;
   while (index_q1 < queue.length && index_q2 < queue.length) {
+    if (sum_q1 === target) {
+      return result;
+    }
     if (sum_q1 < target) {
       sum_q1 += queue[index_q2];
       index_q2++;
@@ -14,8 +17,6 @@ function solution(queue1, queue2) {
       sum_q1 -= queue[index_q1];
       index_q1++;
       result++;
-    } else if (sum_q1 === target) {
-      return result;
     }
   }
   return -1;
