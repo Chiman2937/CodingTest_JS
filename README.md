@@ -9,11 +9,28 @@
 |  |
 | ------- |
 | [0006-zigzag-conversion](https://github.com/Chiman2937/CodingTest_JS/tree/master/0006-zigzag-conversion) |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/0079-word-search) |
 ## Math
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/Chiman2937/CodingTest_JS/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/Chiman2937/CodingTest_JS/tree/master/0009-palindrome-number) |
+## Array
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/0079-word-search) |
+## Backtracking
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/0079-word-search) |
+## Depth-First Search
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/0079-word-search) |
+## Matrix
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/0079-word-search) |
 <!---LeetCode Topics End-->
   
 </details>
