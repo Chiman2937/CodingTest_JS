@@ -9,6 +9,7 @@
 |  |
 | ------- |
 | [0006-zigzag-conversion](https://github.com/Chiman2937/CodingTest_JS/tree/master/0006-zigzag-conversion) |
+| [0008-string-to-integer-atoi](https://github.com/Chiman2937/CodingTest_JS/tree/master/0008-string-to-integer-atoi) |
 | [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/0079-word-search) |
 ## Math
 |  |
