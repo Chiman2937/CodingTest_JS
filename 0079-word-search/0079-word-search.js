@@ -14,11 +14,10 @@ var exist = function(board, word) {
         }
     }
     const directions = [[0,1],[1,0],[0,-1],[-1,0]];
-    let answer = false;
 
     let visitors = new Set();;
     function dfs(pos, index){
-        if(index === word.length) answer = true;
+        if(index === word.length) return true;
         for (const d of directions) {
             const nextRow = pos[0] + d[0];
             const nextCol = pos[1] + d[1];
@@ -26,17 +25,18 @@ var exist = function(board, word) {
             if(visitors.has(`${nextRow},${nextCol}`)) continue;
             if(board[nextRow][nextCol] === word[index]) {
                 visitors.add(`${nextRow},${nextCol}`);
-                dfs([nextRow,nextCol],index+1)
+                if(dfs([nextRow,nextCol],index+1)) return true;
                 visitors.delete(`${nextRow},${nextCol}`);
             }
         }
+        return false;
     }
     for(const start_pos of start_list){
         visitors.add(`${start_pos[0]},${start_pos[1]}`);
-        dfs(start_pos,1);
+        if (dfs(start_pos,1)) return true;
         visitors.delete(`${start_pos[0]},${start_pos[1]}`);
     }
-    return answer;
+    return false;
 };
 
 // A B C E
