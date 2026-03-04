@@ -32,6 +32,7 @@
 | ------- |
 | [0001-two-sum](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0001-two-sum) |
 | [0045-jump-game-ii](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0045-jump-game-ii) |
+| [0055-jump-game](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0055-jump-game) |
 | [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 ## Hash Table
 |  |
@@ -53,6 +54,7 @@
 | [0005-longest-palindromic-substring](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0022-generate-parentheses) |
 | [0045-jump-game-ii](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0045-jump-game-ii) |
+| [0055-jump-game](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0055-jump-game) |
 ## Backtracking
 |  |
 | ------- |
@@ -70,6 +72,7 @@
 |  |
 | ------- |
 | [0045-jump-game-ii](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0045-jump-game-ii) |
+| [0055-jump-game](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0055-jump-game) |
 <!---LeetCode Topics End-->
 
 </details>
