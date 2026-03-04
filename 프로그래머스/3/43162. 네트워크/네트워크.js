@@ -18,7 +18,6 @@ function solution(n, computers) {
             if(visitors.has(key)) continue
             visitors.add(key);
             let members = graph.get(key);
-            console.log(members)
             for(const m of members){
                 queue.push(m);
             }
