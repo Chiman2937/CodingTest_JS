@@ -6,6 +6,7 @@ CodingTest_JS
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0007-reverse-integer) |
+| [0009-palindrome-number](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0009-palindrome-number) |
 | [0043-multiply-strings](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0043-multiply-strings) |
 ## String
 |  |
