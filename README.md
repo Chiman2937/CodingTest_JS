@@ -1,5 +1,8 @@
-CodingTest_JS
+# CodingTest_JS
 
+<details>
+  <summary><h2>LeetCode</h2></summary>
+  
 <!---LeetCode Topics Start-->
 # LeetCode Topics
 ## Math
@@ -59,3 +62,5 @@ CodingTest_JS
 | ------- |
 | [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 <!---LeetCode Topics End-->
+
+</details>
