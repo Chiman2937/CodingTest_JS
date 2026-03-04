@@ -18,6 +18,7 @@ CodingTest_JS
 | [0008-string-to-integer-atoi](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0008-string-to-integer-atoi) |
 | [0013-roman-to-integer](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0013-roman-to-integer) |
 | [0043-multiply-strings](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0043-multiply-strings) |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 ## Simulation
 |  |
 | ------- |
@@ -26,6 +27,7 @@ CodingTest_JS
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0001-two-sum) |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 ## Hash Table
 |  |
 | ------- |
@@ -44,4 +46,16 @@ CodingTest_JS
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0005-longest-palindromic-substring) |
+## Backtracking
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
+## Depth-First Search
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
+## Matrix
+|  |
+| ------- |
+| [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 <!---LeetCode Topics End-->
