@@ -11,6 +11,7 @@ CodingTest_JS
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0003-longest-substring-without-repeating-characters) |
 | [0005-longest-palindromic-substring](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0005-longest-palindromic-substring) |
+| [0006-zigzag-conversion](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0006-zigzag-conversion) |
 | [0043-multiply-strings](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0043-multiply-strings) |
 ## Simulation
 |  |
