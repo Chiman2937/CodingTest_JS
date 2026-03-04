@@ -20,6 +20,7 @@
 | [0006-zigzag-conversion](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0006-zigzag-conversion) |
 | [0008-string-to-integer-atoi](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0008-string-to-integer-atoi) |
 | [0013-roman-to-integer](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0013-roman-to-integer) |
+| [0022-generate-parentheses](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0022-generate-parentheses) |
 | [0043-multiply-strings](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0043-multiply-strings) |
 | [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 ## Simulation
@@ -49,9 +50,11 @@
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0005-longest-palindromic-substring) |
+| [0022-generate-parentheses](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0022-generate-parentheses) |
 ## Backtracking
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0022-generate-parentheses) |
 | [0079-word-search](https://github.com/Chiman2937/CodingTest_JS/tree/master/LeetCode/0079-word-search) |
 ## Depth-First Search
 |  |
