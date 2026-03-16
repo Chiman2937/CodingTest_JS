@@ -1,13 +1,14 @@
 function solution(weights) {
+    weights.sort((a,b)=>b-a)
     let result = 0;
     let ratios = [
         [1,1],
         [2,3],
-        [3,2],
+        // [3,2],
         [2,4],
-        [4,2],
+        // [4,2],
         [3,4],
-        [4,3]
+        // [4,3]
     ]
     
     let map = new Map();
