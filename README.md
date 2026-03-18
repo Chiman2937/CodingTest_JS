@@ -7,6 +7,7 @@
   |문제번호|유형|링크|
   |---|---|---|
   |[2164](https://www.acmicpc.net/problem/2164)|Linked List|[오답노트](https://github.com/Chiman2937/CodingTest_JS/blob/main/%EB%B0%B1%EC%A4%80/Silver/2164.%E2%80%85%EC%B9%B4%EB%93%9C2/%EC%98%A4%EB%8B%B5%EB%85%B8%ED%8A%B8.md)|
+  |[11866](https://www.acmicpc.net/problem/11866)|Linked List|[오답노트](https://github.com/Chiman2937/CodingTest_JS/blob/main/%EB%B0%B1%EC%A4%80/Silver/11866.%E2%80%85%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%E2%80%85%EB%AC%B8%EC%A0%9C%E2%80%850/%EC%98%A4%EB%8B%B5%EB%85%B8%ED%8A%B8.md)|
   
 </details>
 
