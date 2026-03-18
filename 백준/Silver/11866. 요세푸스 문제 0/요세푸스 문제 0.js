@@ -8,25 +8,24 @@ let input = require('fs')
 const [n, k] = input[0].split(' ').map(Number);
 
 function solution(n, k) {
-  let array = new Array(n)
-    .fill(0)
-    .map((v, i) => ({ value: i + 1, visited: false }));
   let result = [];
 
+  let array = new Int32Array(n + 1);
+  for (let i = 1; i <= n; i++) {
+    array[i] = (i % n) + 1;
+  }
+
   let remain = n;
-  let count = 1;
-  let i = 0;
+  let cur = n;
   while (remain > 0) {
-    if (!array[i].visited && count !== k) {
-      count++;
-    } else if (!array[i].visited && count === k) {
-      array[i].visited = true;
-      count = 1;
-      result.push(array[i].value);
-      remain--;
-    } else if (array[i].visited) {
+    for (let i = 0; i < k - 1; i++) {
+      cur = array[cur];
     }
-    i = (i + 1) % n;
+
+    const removed = array[cur];
+    array[cur] = array[removed];
+    result.push(removed);
+    remain--;
   }
 
   return '<' + result.join(', ') + '>';
