@@ -5,16 +5,18 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
+let n = +input[0];
+
 function solution(n) {
-  let count5 = 0;
+  let result = 0;
   for (let i = 2; i <= n; i++) {
     let num = i;
     while (num % 5 === 0) {
       num = num / 5;
-      count5++;
+      result++;
     }
   }
-  console.log(count5);
+  return result;
 }
 
-solution(Number(input[0]));
+console.log(solution(n));
