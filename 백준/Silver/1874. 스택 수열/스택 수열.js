@@ -5,21 +5,19 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [n, ...numbers] = input.map(Number);
-
-n = +n;
-numbers = numbers.map(Number);
-
-function solution(n, numbers) {
-  let cur = 1;
-  let stack = [];
+let [n, ...list] = input.map(Number);
+list = list.map(Number);
+function solution(n, list) {
   let result = '';
-  for (const target of numbers) {
-    while (target >= cur) {
-      stack.push(cur++);
+  let stack = [];
+  let cur = 1;
+  for (let l of list) {
+    while (cur <= l) {
+      stack.push(cur);
+      cur++;
       result += '+\n';
     }
-    if (stack[stack.length - 1] === target) {
+    if (stack[stack.length - 1] === l) {
       stack.pop();
       result += '-\n';
     } else {
@@ -29,4 +27,4 @@ function solution(n, numbers) {
   return result;
 }
 
-console.log(solution(n, numbers));
+console.log(solution(n, list));
