@@ -5,11 +5,12 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [size, ...arr] = input;
-let [row, col] = size.split(' ');
+let [v, ...list] = input;
+let [n, m] = v.split(' ').map(Number);
 
-function solution(row, col, arr) {
-  const whiteFirst = [
+function solution(n, m, list) {
+  let result = Infinity;
+  const start_white = [
     'WBWBWBWB',
     'BWBWBWBW',
     'WBWBWBWB',
@@ -19,8 +20,7 @@ function solution(row, col, arr) {
     'WBWBWBWB',
     'BWBWBWBW',
   ];
-
-  const blackFirst = [
+  const start_black = [
     'BWBWBWBW',
     'WBWBWBWB',
     'BWBWBWBW',
@@ -31,22 +31,20 @@ function solution(row, col, arr) {
     'WBWBWBWB',
   ];
 
-  let answer = Infinity;
-
-  for (let i = 0; i <= row - 8; i++) {
-    for (let j = 0; j <= col - 8; j++) {
-      let countW = 0;
-      let countB = 0;
+  for (let i = 0; i <= n - 8; i++) {
+    for (let j = 0; j <= m - 8; j++) {
+      let count_w = 0;
+      let count_b = 0;
       for (let r = 0; r < 8; r++) {
         for (let c = 0; c < 8; c++) {
-          if (arr[i + r][j + c] !== whiteFirst[r][c]) countW++;
-          if (arr[i + r][j + c] !== blackFirst[r][c]) countB++;
+          if (list[r + i][c + j] !== start_white[r][c]) count_w++;
+          if (list[r + i][c + j] !== start_black[r][c]) count_b++;
         }
       }
-      answer = Math.min(answer, Math.min(countW, countB));
+      result = Math.min(count_w, count_b, result);
     }
   }
-  return answer;
+  return result;
 }
 
-console.log(solution(row, col, arr));
+console.log(solution(n, m, list));
