@@ -7,22 +7,25 @@ let input = require('fs')
 
 let [n, ...list] = input;
 
-function solution(n, list) {
+function solution(list) {
   let result = '';
-  for (let i = 0; i < n; i++) {
-    let count = 0;
-    for (const str of list[i]) {
-      if (str === '(') count++;
-      else if (str === ')') count--;
-      if (count < 0) break;
+  for (let l of list) {
+    let isBalance = true;
+    let stack = 0;
+    for (let i = 0; i < l.length; i++) {
+      if (l[i] === '(') stack++;
+      else {
+        if (stack === 0) {
+          isBalance = false;
+          break;
+        }
+        stack--;
+      }
     }
-    if (count === 0) {
-      result += 'YES\n';
-    } else {
-      result += 'NO\n';
-    }
+    if (stack !== 0) isBalance = false;
+    result += isBalance ? 'YES\n' : 'NO\n';
   }
   return result;
 }
 
-console.log(solution(n, list));
+console.log(solution(list));
