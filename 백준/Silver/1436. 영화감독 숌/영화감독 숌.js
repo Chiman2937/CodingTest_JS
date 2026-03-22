@@ -5,26 +5,19 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
+let n = +input[0];
+
 function solution(n) {
-  //
-  // 0666 1666 2666 3666 4666 5666
-  // 6660 6661 6662 6663 6664 6666 6667 6668 6669
-  // 7666 8666 9666
-  // 10666 11666 12666 13666 14666 15666
-  // 16660 16661 16662 16663 16664 16665 16666 16667 16668 16669
-  // 17666 18666 19666
-  let i = 0;
   let count = 0;
+  let number = 0;
   while (true) {
-    if (String(i).includes('666')) {
+    if (String(number).includes('666')) {
       count++;
     }
-    if (count === n) {
-      console.log(i);
-      break;
-    }
-    i++;
+    if (count === n) break;
+    number++;
   }
+  return number;
 }
 
-solution(Number(input[0]));
+console.log(solution(n));
