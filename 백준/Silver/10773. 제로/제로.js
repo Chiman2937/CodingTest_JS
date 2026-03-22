@@ -5,18 +5,15 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [n, ...numbers] = input;
+let [n, ...list] = input.map(Number);
 
-n = Number(n);
-numbers = numbers.map(Number);
-
-function solution(n, numbers) {
+function solution(n, list) {
   let stack = [];
-  for (const num of numbers) {
-    if (num !== 0) stack.push(num);
+  for (let l of list) {
+    if (l !== 0) stack.push(l);
     else stack.pop();
   }
   return stack.reduce((a, c) => a + c, 0);
 }
 
-console.log(solution(n, numbers));
+console.log(solution(n, list));
