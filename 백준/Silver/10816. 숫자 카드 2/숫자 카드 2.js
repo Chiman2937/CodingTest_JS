@@ -5,29 +5,21 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [n, cards, m, queries] = input;
+let [n, list, m, find] = input;
 
-function solution(n, cards, m, queries) {
-  let result = '';
+list = list.split(' ').map(Number);
+find = find.split(' ').map(Number);
 
-  let cardMap = new Map();
-  for (let i = 0; i < n; i++) {
-    if (!cardMap.get(cards[i])) cardMap.set(cards[i], 0);
-    cardMap.set(cards[i], cardMap.get(cards[i]) + 1);
+function solution(list, find) {
+  let result = [];
+  let map = new Map();
+  for (let l of list) {
+    map.set(l, (map.get(l) ?? 0) + 1);
   }
-
-  for (const q of queries) {
-    result += (cardMap.get(q) ?? 0) + ' ';
+  for (let f of find) {
+    result.push(map.get(f) ?? 0);
   }
-
-  return result;
+  return result.join(' ');
 }
 
-console.log(
-  solution(
-    +n,
-    cards.split(' ').map(Number),
-    +m,
-    queries.split(' ').map(Number),
-  ),
-);
+console.log(solution(list, find));
