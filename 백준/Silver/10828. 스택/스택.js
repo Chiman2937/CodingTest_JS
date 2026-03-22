@@ -10,14 +10,18 @@ let [n, ...list] = input;
 function solution(n, list) {
   let stack = [];
   let result = '';
-  for (let item of list) {
-    let [command, value] = item.split(' ');
+  for (let l of list) {
+    let [command, value] = l.split(' ');
     switch (command) {
       case 'push':
         stack.push(+value);
         break;
       case 'pop':
-        result += stack.length === 0 ? '-1\n' : stack.pop() + '\n';
+        if (stack.length === 0) result += '-1\n';
+        else {
+          const v = stack.pop();
+          result += v + '\n';
+        }
         break;
       case 'size':
         result += stack.length + '\n';
