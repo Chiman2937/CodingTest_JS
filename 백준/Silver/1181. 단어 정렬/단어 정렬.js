@@ -5,20 +5,15 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-const [n, ...words] = input;
+let [n, ...list] = input;
 
-function solution(n, words) {
-  words = [...new Set([...words])];
-
-  words.sort((a, b) => {
-    // 길이가 짧은것부터
+function solution(n, list) {
+  list = [...new Set(list)];
+  list.sort((a, b) => {
     if (a.length !== b.length) return a.length - b.length;
-    // 길이가 같으면 사전순
-    if (a.length === b.length) return a.localeCompare(b);
+    return a.localeCompare(b);
   });
-  for (const word of words) {
-    console.log(word);
-  }
+  return list.join('\n');
 }
 
-solution(n, words);
+console.log(solution(+n, list));
