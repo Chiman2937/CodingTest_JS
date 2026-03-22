@@ -5,21 +5,19 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-const [n, ...people] = input;
+let [n, ...list] = input;
 
-function solution(n, people) {
-  let result = '';
-  for (let i = 0; i < people.length; i++) {
-    let rank = 1;
-    for (let j = 0; j < people.length; j++) {
-      if (i === j) continue;
-      const [me_x, me_y] = people[i].split(' ').map(Number);
-      const [p_x, p_y] = people[j].split(' ').map(Number);
-      if (me_x < p_x && me_y < p_y) rank++;
+function solution(n, list) {
+  let result = [];
+  list = list.map((v) => v.split(' ').map(Number));
+  for (let i = 0; i < n; i++) {
+    let rank = 0;
+    for (let j = 0; j < n; j++) {
+      if (list[i][0] < list[j][0] && list[i][1] < list[j][1]) rank++;
     }
-    result += i === 0 ? rank : ' ' + rank;
+    result.push(rank + 1);
   }
-  return result;
+  return result.join(' ');
 }
 
-console.log(solution(n, people));
+console.log(solution(n, list));
