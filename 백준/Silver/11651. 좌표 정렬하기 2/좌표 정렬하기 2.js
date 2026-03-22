@@ -5,19 +5,16 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [n, ...positions] = input;
+let [n, ...list] = input;
 
-n = Number(n);
-positions = positions.map((v) => v.split(' ').map(Number));
-
-function solution(n, positions) {
-  return positions
-    .sort((a, b) => {
-      if (a[1] !== b[1]) return a[1] - b[1];
-      return a[0] - b[0];
-    })
-    .map((v) => v.join(' '))
-    .join('\n');
+function solution(n, list) {
+  list.sort((a, b) => {
+    let [ax, ay] = a.split(' ').map(Number);
+    let [bx, by] = b.split(' ').map(Number);
+    if (ay === by) return ax - bx;
+    return ay - by;
+  });
+  return list.join('\n');
 }
 
-console.log(solution(n, positions));
+console.log(solution(n, list));
