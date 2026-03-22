@@ -5,10 +5,11 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [n, ...numbers] = input;
+let [n, ...list] = input.map(Number);
 
-function solution(n, numbers) {
-  return numbers.sort((a, b) => a - b).join('\n');
+function solution(n, list) {
+  list.sort((a, b) => a - b);
+  return list.join('\n');
 }
 
-console.log(solution(n, numbers));
+console.log(solution(n, list));
