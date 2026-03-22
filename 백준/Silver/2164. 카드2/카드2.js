@@ -5,26 +5,14 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-const n = Number(input[0]);
+let n = +input[0];
 
 function solution(n) {
-  let array = new Int32Array(n + 1);
-
-  for (let i = 1; i <= n; i++) {
-    array[i] = (i % n) + 1;
+  let list = new Array(n).fill(0).map((v, i) => i + 1);
+  for (let i = 1; i < list.length; i += 2) {
+    list.push(list[i]);
   }
-
-  let remain = n; // 남은 카드 갯수
-  let cur = n; // 버릴카드를 가리키는 카드가 되어야함
-
-  while (remain > 1) {
-    let toDiscard = array[cur];
-    let toMove = array[toDiscard];
-    array[cur] = toMove;
-    cur = toMove;
-    remain--;
-  }
-  return array[cur];
+  return list[list.length - 1];
 }
 
 console.log(solution(n));
