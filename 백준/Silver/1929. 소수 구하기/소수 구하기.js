@@ -8,21 +8,17 @@ let input = require('fs')
 let [n, m] = input[0].split(' ').map(Number);
 
 function solution(n, m) {
-  let arrayLength = m - n + 1;
-  let array = new Array(arrayLength).fill(0).map((v, i) => i + n);
-  let isPrime = new Array(arrayLength).fill(true);
+  if (n === 1) n++;
+  let isPrime = new Array(m - n + 1).fill(true);
   let result = '';
-
-  if (array[0] === 1) isPrime[0] = false;
-
   for (let i = 2; i <= Math.sqrt(m); i++) {
     let start = Math.max(i * i, Math.ceil(n / i) * i);
-    for (let j = start - n; j < arrayLength; j += i) {
+    for (let j = start - n; j <= m - n; j += i) {
       isPrime[j] = false;
     }
   }
-  for (let i = 0; i < arrayLength; i++) {
-    if (isPrime[i]) result += array[i] + '\n';
+  for (let i = 0; i < isPrime.length; i++) {
+    if (isPrime[i]) result += n + i + '\n';
   }
   return result;
 }
