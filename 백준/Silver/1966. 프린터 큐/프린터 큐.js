@@ -5,37 +5,32 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [count, ...cases] = input;
+let [n, ...list] = input;
 
-function solution(count, cases) {
-  count = +count;
+function solution(list) {
   let result = '';
-  for (let i = 0; i < cases.length; i += 2) {
-    let [n, m] = cases[i].split(' ').map(Number);
-    let list = cases[i + 1]
-      .split(' ')
-      .map(Number)
-      .map((v, i) => ({ value: v, index: i }));
-    if (list.length === 1) {
-      result += '1\n';
-      continue;
-    }
-    let count = 0;
-    while (true) {
-      const cur = list.shift();
-      if (list.some((v) => cur.value < v.value)) {
-        list.push(cur);
+  for (let i = 0; i < list.length; i += 2) {
+    let target = +list[i].split(' ')[1];
+    let print = [];
+    let queue = list[i + 1].split(' ').map(Number);
+    queue = queue.map((v, i) => ({
+      priority: v,
+      index: i,
+    }));
+    while (queue.length > 0) {
+      let item = queue.shift();
+      if (queue.some((v) => v.priority > item.priority)) {
+        queue.push(item);
       } else {
-        count++;
-        if (cur.index === m) {
-          result += count + '\n';
+        if (item.index === target) {
+          result += print.length + 1 + '\n';
           break;
         }
+        print.push(item);
       }
     }
   }
-
   return result;
 }
 
-console.log(solution(count, cases));
+console.log(solution(list));
