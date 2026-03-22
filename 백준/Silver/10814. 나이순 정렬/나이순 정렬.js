@@ -5,18 +5,21 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-let [n, ...members] = input;
+let [n, ...list] = input;
 
-function solution(n, members) {
-  members = members
-    .map((v, i) => ({ v, i }))
-    .sort((a, b) => {
-      const ageA = Number(a.v.split(' ')[0]);
-      const ageB = Number(b.v.split(' ')[0]);
-      if (ageA !== ageB) return ageA - ageB;
-      else return a.i - b.i;
-    });
-  return members.map((v) => v.v).join('\n');
+function solution(n, list) {
+  list = list.map((v, i) => ({
+    value: v,
+    index: i,
+  }));
+  list.sort((a, b) => {
+    let ageA = +a.value.split(' ')[0];
+    let ageB = +b.value.split(' ')[0];
+    if (ageA !== ageB) return ageA - ageB;
+    return a.index - b.index;
+  });
+  list = list.map((v) => v.value);
+  return list.join('\n');
 }
 
-console.log(solution(n, members));
+console.log(solution(+n, list));
