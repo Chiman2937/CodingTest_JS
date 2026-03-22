@@ -5,29 +5,24 @@ let input = require('fs')
   .trim()
   .split(/\r?\n/);
 
-const [n, k] = input[0].split(' ').map(Number);
+let [n, k] = input[0].split(' ').map(Number);
 
 function solution(n, k) {
+  let list = new Array(n + 1)
+    .fill(0)
+    .map((v, i) => (i === 0 ? 0 : (i % n) + 1));
   let result = [];
-
-  let array = new Int32Array(n + 1);
-  for (let i = 1; i <= n; i++) {
-    array[i] = (i % n) + 1;
-  }
-
   let remain = n;
   let cur = n;
   while (remain > 0) {
     for (let i = 0; i < k - 1; i++) {
-      cur = array[cur];
+      cur = list[cur];
     }
-
-    const removed = array[cur];
-    array[cur] = array[removed];
-    result.push(removed);
+    let discard = list[cur];
+    list[cur] = list[discard];
+    result.push(discard);
     remain--;
   }
-
   return '<' + result.join(', ') + '>';
 }
 
