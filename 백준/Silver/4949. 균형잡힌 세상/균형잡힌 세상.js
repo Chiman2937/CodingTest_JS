@@ -9,34 +9,28 @@ input.pop();
 
 function solution(list) {
   let result = '';
-
-  for (const string of list) {
+  for (let l of list) {
     let stack = [];
-    let isBalanced = true;
-    for (const s of string) {
-      if (s === '(') stack.push('(');
-      if (s === '[') stack.push('[');
-      if (s === ')') {
-        if (stack[stack.length - 1] === '(') {
-          stack.pop();
-        } else {
-          isBalanced = false;
+    let isBalance = true;
+    for (let i = 0; i < l.length; i++) {
+      if (l[i] === '(' || l[i] === '[') stack.push(l[i]);
+      else if (l[i] === ')') {
+        if (stack[stack.length - 1] !== '(') {
+          isBalance = false;
           break;
         }
-      }
-      if (s === ']') {
-        if (stack[stack.length - 1] === '[') {
-          stack.pop();
-        } else {
-          isBalanced = false;
+        stack.pop();
+      } else if (l[i] === ']') {
+        if (stack[stack.length - 1] !== '[') {
+          isBalance = false;
           break;
         }
+        stack.pop();
       }
     }
-    if (stack.length > 0) isBalanced = false;
-    result += (isBalanced ? 'yes' : 'no') + '\n';
+    if (stack.length !== 0) isBalance = false;
+    result += isBalance ? 'yes\n' : 'no\n';
   }
-
   return result;
 }
 
