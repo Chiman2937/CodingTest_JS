@@ -26,15 +26,18 @@ function solution(list, n, v) {
   // dfs
 
   let visitors = new Set();
+  let stack = [v];
 
-  function dfs(n) {
-    if (visitors.has(n)) return;
-    visitors.add(n);
-    for (let item of map.get(n)) {
-      dfs(item);
+  while (stack.length > 0) {
+    let key = stack.pop();
+    if (visitors.has(key)) continue;
+    visitors.add(key);
+    let neighbors = map.get(key);
+    for (let i = neighbors.length - 1; i >= 0; i--) {
+      if (visitors.has(neighbors[i])) continue;
+      stack.push(neighbors[i]);
     }
   }
-  dfs(v);
   result += [...visitors].join(' ') + '\n';
 
   // bfs
