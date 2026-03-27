@@ -8,20 +8,15 @@ let input = require('fs')
 let [n, m, s] = input;
 
 function solution(n, m, s) {
-  let matcher = '';
-  for (let i = 1; i <= n; i++) {
-    matcher += 'IO';
+  let matcher = 'IOI';
+  let matchedList = new Array(m).fill(0);
+  for (let i = 0; i <= m - 3; i++) {
+    if (s.substring(i, i + 3) === matcher) {
+      if (i < 2) matchedList[i] = 1;
+      else matchedList[i] = matchedList[i - 2] + 1;
+    }
   }
-  matcher += 'I';
-
-  let result = 0;
-
-  for (let i = 0; i < m - matcher.length + 1; i++) {
-    let sliced = s.substring(i, i + 2 * n + 1);
-    if (sliced === matcher) result++;
-  }
-
-  return result;
+  return matchedList.filter((v) => v >= n).length;
 }
 
 console.log(solution(+n, +m, s));
