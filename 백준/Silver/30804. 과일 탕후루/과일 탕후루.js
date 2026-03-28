@@ -9,24 +9,20 @@ let [n, list] = input;
 list = list.split(' ').map(Number);
 
 function solution(n, list) {
-  let result = 0;
   let left = 0;
   let right = 0;
   let sum = 0;
   let map = new Map();
+  let result = 0;
   while (right < n) {
-    while (map.size > 1) {
-      let target = list[left];
-      sum--;
-      if (map.get(target) === 1) map.delete(target);
-      else map.set(target, map.get(target) - 1);
+    map.set(list[right], (map.get(list[right]) ?? 0) + 1);
+    right++;
+    sum++;
+    while (map.size > 2) {
+      if (map.get(list[left]) === 1) map.delete(list[left]);
+      else map.set(list[left], map.get(list[left]) - 1);
       left++;
-    }
-    while (right < n && (map.size < 2 || map.get(list[right]) !== undefined)) {
-      let target = list[right];
-      sum++;
-      map.set(target, (map.get(target) ?? 0) + 1);
-      right++;
+      sum--;
     }
     result = Math.max(result, sum);
   }
