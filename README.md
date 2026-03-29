@@ -13,6 +13,7 @@
   |[5525](https://www.acmicpc.net/problem/5525)|String, Dynamic Programming|[오답노트](https://github.com/Chiman2937/CodingTest_JS/tree/main/%EB%B0%B1%EC%A4%80/Silver/5525.%E2%80%85IOIOI)|
   |[30804](https://www.acmicpc.net/problem/30804)|Two Pointer|[오답노트](https://github.com/Chiman2937/CodingTest_JS/tree/main/%EB%B0%B1%EC%A4%80/Silver/30804.%E2%80%85%EA%B3%BC%EC%9D%BC%E2%80%85%ED%83%95%ED%9B%84%EB%A3%A8)|
   |[1931](https://www.acmicpc.net/problem/1931)|Greedy|[오답노트](https://github.com/Chiman2937/CodingTest_JS/blob/main/%EB%B0%B1%EC%A4%80/Gold/1931.%E2%80%85%ED%9A%8C%EC%9D%98%EC%8B%A4%E2%80%85%EB%B0%B0%EC%A0%95/%EC%98%A4%EB%8B%B5%EB%85%B8%ED%8A%B8.md)|
+  |[9019](https://www.acmicpc.net/problem/9019)|BFS|[오답노트](https://github.com/Chiman2937/CodingTest_JS/tree/main/%EB%B0%B1%EC%A4%80/Gold/9019.%E2%80%85DSLR)|
 </details>
 
 <details>
