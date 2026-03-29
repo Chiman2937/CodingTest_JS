@@ -21,7 +21,7 @@ function solution(cases) {
       if (n === target) break;
       for (let c of dirs) {
         let v = calc(c, n);
-        if (!prev[v]) {
+        if (prev[v] === null) {
           queue.push(v);
           prev[v] = [n, c];
         }
@@ -47,11 +47,9 @@ function calc(command, n) {
     case 'S':
       return n === 0 ? 9999 : n - 1;
     case 'L':
-      let str1 = String(n).padStart(4, 0);
-      return +(str1.substring(1) + str1.substring(0, 1));
+      return (n % 1000) * 10 + Math.floor(n / 1000);
     case 'R':
-      let str2 = String(n).padStart(4, 0);
-      return +(str2.substring(3) + str2.substring(0, 3));
+      return (n % 10) * 1000 + Math.floor(n / 10);
   }
 }
 
